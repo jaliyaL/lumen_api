@@ -11,10 +11,10 @@
 |
 */
 
-$app->group(['prefix'=>'api/v1'], function() use($app){
-    $app->get('/products', 'ProductController@index');
-    $app->post('/product', 'ProductController@create');
-    $app->get('/product/{id}', 'ProductController@show');
-    $app->put('/product/{id}', 'ProductController@update');
-    $app->delete('/product/{id}', 'ProductController@destroy');
+$router->group(['prefix'=>'api/v1'], function() use($router){
+    $router->get('/products', 'ProductController@index');
+    $router->post('/product', 'ProductController@create');
+    $router->get('/product/{id}', 'ProductController@show');
+    $router->put('/product/{id}', 'ProductController@update');
+    $router->delete('/product/{id}', 'ProductController@destroy');
 });
